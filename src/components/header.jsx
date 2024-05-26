@@ -1,6 +1,7 @@
 import MenuItem from "./MenuItem";
 import {AiFillHome} from "react-icons/ai";
 import {BsFillInfoCircleFill} from "react-icons/bs";
+import DarkMode from "./DarkMode";
 
 
 export default function Header() {
@@ -10,10 +11,14 @@ export default function Header() {
         <MenuItem title="HOME" address="/" Icon={AiFillHome}/>
         <MenuItem title="About" address="/about" Icon={BsFillInfoCircleFill}/>
       </div>
+      <div className="flex items-center gap-4">
+        <DarkMode></DarkMode>
       <div className="flex gap-1 items-center">
         <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg">IMDB</span>
         <span className="text-xl hidden sm:inline">clone</span>
       </div>
+      </div>
+     
     </div>
   )
 }
